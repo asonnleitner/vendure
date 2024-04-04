@@ -51,6 +51,7 @@ export class PromotionDetailComponent
         enabled: true,
         couponCode: null as string | null,
         perCustomerUsageLimit: null as number | null,
+        usageLimit: null as number | null,
         startsAt: null,
         endsAt: null,
         conditions: this.formBuilder.array([]),
@@ -151,6 +152,7 @@ export class PromotionDetailComponent
                 description: '',
                 couponCode: null,
                 perCustomerUsageLimit: null,
+                usageLimit: null,
                 enabled: false,
                 conditions: [],
                 actions: [],
@@ -255,6 +257,7 @@ export class PromotionDetailComponent
             enabled: entity.enabled,
             couponCode: entity.couponCode,
             perCustomerUsageLimit: entity.perCustomerUsageLimit,
+            usageLimit: entity.usageLimit,
             startsAt: entity.startsAt,
             endsAt: entity.endsAt,
         });
@@ -263,7 +266,12 @@ export class PromotionDetailComponent
         });
         entity.actions.forEach(o => this.addOperation('actions', o));
         if (this.customFields.length) {
-            this.setCustomFieldFormValues(this.customFields, this.detailForm.get('customFields'), entity);
+            this.setCustomFieldFormValues(
+                this.customFields,
+                this.detailForm.get('customFields'),
+                entity,
+                currentTranslation,
+            );
         }
     }
 

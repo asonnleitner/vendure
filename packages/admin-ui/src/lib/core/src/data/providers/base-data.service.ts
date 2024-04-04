@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MutationUpdaterFn, SingleExecutionResult, WatchQueryFetchPolicy } from '@apollo/client/core';
 import { TypedDocumentNode } from '@graphql-typed-document-node/core';
@@ -12,19 +11,13 @@ import { CustomFields } from '../../common/generated-types';
 import { QueryResult } from '../query-result';
 import { ServerConfigService } from '../server-config';
 import { addCustomFields } from '../utils/add-custom-fields';
-import {
-    isEntityCreateOrUpdateMutation,
-    removeReadonlyCustomFields,
-} from '../utils/remove-readonly-custom-fields';
+import { removeReadonlyCustomFields } from '../utils/remove-readonly-custom-fields';
 import { transformRelationCustomFieldInputs } from '../utils/transform-relation-custom-field-inputs';
+import { isEntityCreateOrUpdateMutation } from '../utils/is-entity-create-or-update-mutation';
 
 @Injectable()
 export class BaseDataService {
-    constructor(
-        private apollo: Apollo,
-        private httpClient: HttpClient,
-        private serverConfigService: ServerConfigService,
-    ) {}
+    constructor(private apollo: Apollo, private serverConfigService: ServerConfigService) {}
 
     private get customFields(): CustomFields {
         return this.serverConfigService.serverConfig.customFieldConfig || {};

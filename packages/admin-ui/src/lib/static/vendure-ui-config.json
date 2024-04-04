@@ -21,7 +21,11 @@
         "fr",
         "ru",
         "uk",
-        "it"
+        "it",
+        "fa",
+        "ne",
+        "hr",
+        "sv"
     ],
     "brand": "",
     "hideVendureBranding": false,

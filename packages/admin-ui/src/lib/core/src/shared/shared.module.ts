@@ -30,6 +30,7 @@ import { AssetPickerDialogComponent } from './components/asset-picker-dialog/ass
 import { AssetPreviewDialogComponent } from './components/asset-preview-dialog/asset-preview-dialog.component';
 import { AssetPreviewLinksComponent } from './components/asset-preview-links/asset-preview-links.component';
 import { AssetPreviewComponent } from './components/asset-preview/asset-preview.component';
+import { AssetsComponent } from './components/assets/assets.component';
 import { AssetSearchInputComponent } from './components/asset-search-input/asset-search-input.component';
 import { AssignToChannelDialogComponent } from './components/assign-to-channel-dialog/assign-to-channel-dialog.component';
 import { BulkActionMenuComponent } from './components/bulk-action-menu/bulk-action-menu.component';
@@ -59,7 +60,6 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { EditNoteDialogComponent } from './components/edit-note-dialog/edit-note-dialog.component';
 import { EmptyPlaceholderComponent } from './components/empty-placeholder/empty-placeholder.component';
 import { EntityInfoComponent } from './components/entity-info/entity-info.component';
-import { ExtensionHostComponent } from './components/extension-host/extension-host.component';
 import { FacetValueChipComponent } from './components/facet-value-chip/facet-value-chip.component';
 import { FacetValueSelectorComponent } from './components/facet-value-selector/facet-value-selector.component';
 import { FocalPointControlComponent } from './components/focal-point-control/focal-point-control.component';
@@ -171,6 +171,9 @@ import { ZoneSelectorComponent } from './components/zone-selector/zone-selector.
 import { ChartComponent } from './components/chart/chart.component';
 import { CurrencyCodeSelectorComponent } from './components/currency-code-selector/currency-code-selector.component';
 import { LanguageCodeSelectorComponent } from './components/language-code-selector/language-code-selector.component';
+import { DataTableFilterPresetsComponent } from './components/data-table-filter-presets/data-table-filter-presets.component';
+import { AddFilterPresetButtonComponent } from './components/data-table-filter-presets/add-filter-preset-button.component';
+import { RenameFilterPresetDialogComponent } from './components/data-table-filter-presets/rename-filter-preset-dialog.component';
 
 const IMPORTS = [
     ClarityModule,
@@ -190,6 +193,7 @@ const DECLARATIONS = [
     ActionBarComponent,
     ActionBarLeftComponent,
     ActionBarRightComponent,
+    AssetsComponent,
     AssetPreviewComponent,
     AssetPreviewDialogComponent,
     AssetSearchInputComponent,
@@ -246,7 +250,6 @@ const DECLARATIONS = [
     ChannelAssignmentControlComponent,
     ChannelLabelPipe,
     IfDefaultChannelActiveDirective,
-    ExtensionHostComponent,
     CustomFieldLabelPipe,
     CustomFieldDescriptionPipe,
     FocalPointControlComponent,
@@ -314,6 +317,9 @@ const DECLARATIONS = [
     AssignToChannelDialogComponent,
     CurrencyCodeSelectorComponent,
     LanguageCodeSelectorComponent,
+    DataTableFilterPresetsComponent,
+    AddFilterPresetButtonComponent,
+    RenameFilterPresetDialogComponent,
 ];
 
 const DYNAMIC_FORM_INPUTS = [
